@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Contacts</string>
+
+    //name for navigation bar menu
+    <string name="nav_home">Summary</string>
+    <string name="nav_photos">Add Catagory</string>
+    <string name="nav_movies">Manage</string>
+    <string name="nav_notifications">Manage</string>
+    <string name="nav_settings">ADD</string>
+    <string name="nav_about_us">aboutus</string>
+    <string name="privacy_policy">privacy policy</string>
+
+    //close and open
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
