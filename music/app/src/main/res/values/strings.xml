@@ -3,7 +3,7 @@
 
     //name for navigation bar menu
     <string name="nav_home">Summary</string>
-    <string name="nav_photos">Add Catagory</string>
+    <string name="nav_photos">Home</string>
     <string name="nav_movies">Manage</string>
     <string name="nav_notifications">Manage</string>
     <string name="nav_settings">ADD</string>

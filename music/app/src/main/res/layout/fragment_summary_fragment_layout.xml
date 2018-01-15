@@ -10,6 +10,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         >
+
     <RadioGroup
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -50,5 +51,24 @@
             >
         </ListView>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="Grand Total:"
+            android:textSize="20dp"
+            android:id="@+id/grand_total_text"
+            android:layout_alignParentBottom="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/grand_total"
+            android:layout_gravity="right"
+            android:layout_toRightOf="@id/grand_total_text"
+            android:textSize="20dp"
+            android:layout_alignParentBottom="true"
+            />
     </RelativeLayout>
 </FrameLayout>

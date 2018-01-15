@@ -61,14 +61,14 @@ class SummaryFragment : Fragment() {
 
         var list= spendList
 
-        var sfl1= SummaryFragmentLayout.newInstance("Day","Day Summary")
-        sfl1.setDayFilterList(db.getAllSpendForToday())
+        var sfl1= DayFragment.newInstance("Day","Day Summary")
+        sfl1.setFilterList(db.getAllSpendForToday(0))
 
-        var sfl2= SummaryFragmentLayout.newInstance("Month","Month Summary")
-        sfl2.setMonthFilterList(list)
+        var sfl2= MonthFragment.newInstance("Month","Month Summary")
+        sfl2.setFilterList(db.getAllSpendForToday(30))
 
         var sfl3= SummaryFragmentLayout.newInstance("Week","Week Summary")
-        sfl3.setWeekFilterList(list)
+        sfl3.setFilterList(db.getAllSpendForToday(7))
 
         pagerAdapter.addFragment(sfl1,"DAY")
         pagerAdapter.addFragment(sfl3,"WEEK")

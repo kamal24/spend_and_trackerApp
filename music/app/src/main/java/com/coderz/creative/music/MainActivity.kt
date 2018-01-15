@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity(),ActivityCompat.OnRequestPermissionsResu
         super.onCreate(savedInstanceState)
         this.setTheme(R.style.Grey)
 
-        var db = DataBaseHelper(applicationContext, DATABASE_NAME, null, DATABASE_VERSION)
+       // var db = DataBaseHelper(applicationContext, DATABASE_NAME, null, DATABASE_VERSION)
         //db.getReadableDatabase();
         setContentView(R.layout.navigation_drawer)
 
@@ -83,16 +83,16 @@ class MainActivity : AppCompatActivity(),ActivityCompat.OnRequestPermissionsResu
                fragment = SummaryFragment()
             }
 
-            R.id.nav_photos -> {
-                fragment = AddDetailFragment()
-            }
-
             R.id.nav_movies -> {
                 fragment = ShowExpenseFragment()
             }
 
             R.id.nav_settings -> {
                 fragment = AddFragment()
+            }
+
+            R.id.nav_photos ->{
+                fragment = HomeFragment()
             }
         }
 

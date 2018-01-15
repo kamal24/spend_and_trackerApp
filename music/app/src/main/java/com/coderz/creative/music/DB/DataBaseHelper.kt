@@ -118,11 +118,11 @@ class DataBaseHelper(context: Context?, name: String?, factory: SQLiteDatabase.C
         return date
     }
 
-    fun getAllSpendForToday() : List<Spend>{
+    fun getAllSpendForToday(numOfDays : Int) : List<Spend>{
         var db= this.readableDatabase
         val sdf = SimpleDateFormat("yyyy-MM-dd")
        // val date = sdf.format(Date())
-        val date = getDateDaysAgo(30)
+        val date = getDateDaysAgo(numOfDays)
 
         var query = "select * from $SPEND_TRACKER_TABLE where $DATE >= '$date'"
         println(query)

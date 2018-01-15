@@ -27,7 +27,7 @@ import java.text.SimpleDateFormat
  */
 class SummaryFragmentLayout : Fragment(), OnCheckedChangeListener {
     override fun onCheckedChanged(group: RadioGroup?, checkedId: Int) {
-        Toast.makeText(context, mParam1, Toast.LENGTH_LONG).show()
+       // Toast.makeText(context, mParam1, Toast.LENGTH_LONG).show()
 
         var newFilterList= filterList
         when(checkedId){
@@ -105,15 +105,6 @@ class SummaryFragmentLayout : Fragment(), OnCheckedChangeListener {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        if(mParam1.equals("Day")){
-            setFilterList(day_filterList)
-        }
-        else if (mParam1.equals("Month")){
-            setFilterList(month_filterList)
-        }
-        else if (mParam1.equals("Week")){
-            setFilterList(week_filterList)
-        }
         filter_type.setOnCheckedChangeListener(this)
         filter_all.isChecked = true
     }
@@ -126,30 +117,6 @@ class SummaryFragmentLayout : Fragment(), OnCheckedChangeListener {
         filterList=list
     }
 
-    fun setDayFilterList(list:List<Spend>){
-        day_filterList=list
-    }
-
-    fun getDayFilterList(): List<Spend>{
-        return day_filterList
-    }
-
-    fun setMonthFilterList(list:List<Spend>){
-        month_filterList=list
-    }
-
-    fun getMonthFilterList(): List<Spend>{
-        return month_filterList
-    }
-
-    fun setWeekFilterList(list:List<Spend>){
-        week_filterList=list
-    }
-
-    fun getWeekFilterList(): List<Spend>{
-        return week_filterList
-    }
-
     companion object {
         // TODO: Rename parameter arguments, choose names that match
         // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -158,9 +125,6 @@ class SummaryFragmentLayout : Fragment(), OnCheckedChangeListener {
         private var adapter:ArrayAdapter<String>? = null
         private var spendList = ArrayList<String>()
         private var filterList:List<Spend> = ArrayList<Spend>()
-        private var day_filterList:List<Spend> = ArrayList<Spend>()
-        private var month_filterList:List<Spend> = ArrayList<Spend>()
-        private var week_filterList:List<Spend> = ArrayList<Spend>()
         /**
          * Use this factory method to create a new instance of
          * this fragment using the provided parameters.
